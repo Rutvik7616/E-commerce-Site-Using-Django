@@ -1,0 +1,93 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+
+<body>
+    
+<div class="heading">
+    <h1>about us</h1>
+    <p> <a href="{% url 'index' %}">home >></a> about </p>
+</div>
+
+<section class="about">
+
+    <div class="image">
+        <img src="/static/image/about-img.jpg" alt="">
+    </div>
+
+    <div class="content">
+        <span>welcome to our shop</span>
+        <h3>fresh and organic groceries</h3>
+        <p>Organic food is produced using farming methods that prioritize sustainability and natural processes rather than relying on synthetic pesticides, fertilizers, and genetically modified organisms (GMOs). </p>
+        <p>The goal is to provide consumers with foods that are free from harmful chemicals, are more nutritious, and promote environmental sustainability. </p>
+        <a href="#" class="btn">read more</a>
+    </div>
+
+</section>
+
+<section class="gallery">
+
+    <h1 class="title"> our <span>gallery</span> <a href="#">view all >></a> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="/static/image/gallery-img-1.jpg" alt="">
+            <div class="icons">
+                <a href="#" class="fas fa-eye"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share-alt"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="/static/image/gallery-img-2.jpg" alt="">
+            <div class="icons">
+                <a href="#" class="fas fa-eye"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share-alt"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="/static/image/gallery-img-3.jpg" alt="">
+            <div class="icons">
+                <a href="#" class="fas fa-eye"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share-alt"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="/static/image/gallery-img-4.jpg" alt="">
+            <div class="icons">
+                <a href="#" class="fas fa-eye"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share-alt"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="/static/image/gallery-img-5.jpg" alt="">
+            <div class="icons">
+                <a href="#" class="fas fa-eye"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share-alt"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="/static/image/gallery-img-6.jpg" alt="">
+            <div class="icons">
+                <a href="#" class="fas fa-eye"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share-alt"></a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+</body>
+
+{% endblock content %}

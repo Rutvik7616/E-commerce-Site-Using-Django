@@ -1,0 +1,102 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+<body>
+    
+<div class="heading">
+    <h1>contact us</h1>
+    <p> <a href="{% url 'index' %}">home >></a> contact </p>
+</div>
+
+<section class="contact">
+
+    <div class="icons-container">
+
+        <div class="icons">
+            <i class="fas fa-phone"></i>
+            <h3>our number</h3>
+            <p>9558955551</p>
+            <p>9589255158</p>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-envelope"></i>
+            <h3>our email</h3>
+            <p>harsh@gmail.com</p>
+            <p>rutvik@gmail.com</p>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>our address</h3>
+            <p>Ahmdabad, 384002</p>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <form action="{% url 'contact' %}" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <h3>Contact Us</h3>
+            <div class="inputBox">
+                <input type="name" placeholder="enter your name" class="box" name="name" required>
+                <input type="email" placeholder="enter your email" class="box" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            </div>
+            <div class="inputBox">
+                <input type="text" placeholder="enter your number" class="box" name="Mobile" required>
+                <input type="subject" placeholder="enter your subject" class="box" name="subject"  required>
+            </div>
+            <textarea placeholder="your message" cols="30" rows="10" name="message"  required></textarea>
+            <input type="submit" value="send message" class="btn">
+        </form>
+    </div>
+</section>
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- footer section starts  -->
+
+
+
+<!-- footer section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- custom css file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

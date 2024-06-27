@@ -1,0 +1,28 @@
+{% extends 'header.html' %}
+{% load static %}
+{% block content %}
+<body>
+    <div class="heading">
+        <h1>Login</h1>
+        <p> <a href="{% url 'index' %}">home >></a> Login</p>
+    </div>
+<section class="contact">
+    <div class="row">
+        {% if msg %}
+        <b style="color:red;">{{msg}}</b>
+        {% endif %}
+        <form action="{% url 'login' %}" method="POST">
+            {% csrf_token %}
+            <h3>Login</h3>
+            <div class="inputBox">
+           
+                <input type="email" placeholder="enter your email" class="box" name="email">
+                <input type="password" placeholder="enter your password" class="box" name="password">
+                <input type="submit" value="Login" class="btn">
+                <p><a href="{% url 'password_reset' %}">Forgotten Your Password ?</a></p> 
+            </div>
+        </form>   
+    </div>
+<section>
+</body>
+{% endblock content %}
